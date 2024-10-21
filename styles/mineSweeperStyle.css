@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.difficultyOptionsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.difficultyOption {
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.difficultyOptionSelected {
+    border: 1px solid yellow;
+    color: yellow;
+}
+
+#mineSweeperTable {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    gap: 1px;
+    align-items: center;
+    align-content: center;
+}
+
+.score {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+
+.oneSquare {
+    width: 30px;
+    height: 30px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+/* .containsBomb {
+    background-color: white;
+    color: black;
+} */
+
+.backDrop {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .4;
+    z-index: 2;
+}
+.gameOverContainer , .winContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+}
+.gameOver, .win {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 3;
+}
+.gameOverText, .winText {
+    color: white;
+    font-size: 100px;
+    cursor: default;
+    margin-top: 100px;
+}
+
+.playAgainButton {
+    padding: 5px 10px;
+
+}
+
+/* menu section */
+.menuContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.welcomeText {
+    font-size: 100px;
+}
+
+.colorPickerInput {
+    width: 100px;
+}
