@@ -1,26 +1,26 @@
 const flaggingSquares = (e) => {
     e.preventDefault()
     const elementThatclicked = e.target
-    // const bombsAmount = Number(bombCounter.innerText)
-
-    
+    const minesCounter = document.querySelector('#minesCounter')
 
     if (elementThatclicked.className.includes('oneSquare'))
     {
         const flagged = elementThatclicked.getAttribute('flagged')
 
         if (flagged === 'true') {
+            if (Number(minesCounter.textContent) === bombs) return
             elementThatclicked.setAttribute('flagged' , false)
             elementThatclicked.innerHTML = ''
-            // bombCounter.innerText = bombsAmount + 1
+            minesCounter.textContent = Number(minesCounter.textContent) + 1
             return
         }
 
         if (elementThatclicked.className.includes('showed')) return
 
+        if (Number(minesCounter.textContent) === 0) return
         elementThatclicked.innerHTML = '🚩'
         elementThatclicked.setAttribute('flagged' , true)
-        // bombCounter.innerText = bombsAmount - 1
+        minesCounter.textContent = Number(minesCounter.textContent) - 1
     }   
 
 }

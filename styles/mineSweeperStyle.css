@@ -6,6 +6,31 @@
     font-style: normal;
 }
 
+body {
+    background-color: rgb(200, 200 , 200);
+}
+
+#mineSweeper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.uiContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+}
+
+.timerDiv , .minesDiv {
+    border: black 2px solid;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
 
 .difficultyOptionsContainer {
     display: flex;
@@ -16,21 +41,19 @@
 
 .difficultyOption {
     padding: 20px;
-    border: 1px solid white;
+    border: 3px solid black;
     border-radius: 15px;
-    color: white;
+    color: black;
     font-weight: 700;
     cursor: pointer;
 }
 
 .difficultyOptionSelected {
-    border: 1px solid yellow;
+    border: 3px solid lightgoldenrodyellow;
     color: yellow;
 }
 
 #mineSweeperTable {
-    width: 100vw;
-    height: 100vh;
     display: grid;
     justify-content: center;
     gap: 1px;
@@ -49,20 +72,14 @@
 }
 
 .oneSquare {
-    width: 30px;
-    height: 30px;
     color: white;
 
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: default;
+    border-radius: 5px;
 }
-
-/* .containsBomb {
-    background-color: white;
-    color: black;
-} */
 
 .backDrop {
     position: absolute;
@@ -102,11 +119,8 @@
 
 /* menu section */
 .menuContainer {
-    position: absolute;
     width: 100vw;
     height: 100vh;
-    z-index: 999;
-    background-color: gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,6 +132,18 @@
     font-size: 100px;
 }
 
-.colorPickerInput {
-    width: 100px;
+.playButton {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgreen;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.playButton:hover {
+    background-color: rgb(50 , 250 , 50);
+}
+.playButton:active {
+    background-color: rgb(50, 150, 50);
 }
